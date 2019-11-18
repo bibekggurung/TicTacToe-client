@@ -1,8 +1,7 @@
 'use strict'
 const store = require('../store')
-const gameplayLogic = require('./gameplay-logic')
 
-const onGetGamesSuccess = (gameData)
+// const onGetGamesSuccess = (gameData)
 
 const onSuccess = message => {
   $('#message').text(message).addClass('success').removeClass('failure')

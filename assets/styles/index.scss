@@ -23,19 +23,39 @@ $black: #000;
   display: none;
 }
 
-h1 {
-  text-align: center;
-  font-family: 'Playfair Display', serif;
-  color: #008080;
+body {
+  display: grid;
+  min-height: 100vh;
 }
 
-td {
-  width: 150px;
-  height: 150px;
-  text-align: center;
-  border: solid;
+body {
+  display: grid;
+  min-height: 100vh;
 }
 
-table {
-  margin: 5px auto;
+.board {
+  margin: 0px auto;
+  max-height: calc(100vh - 75px);
+  max-width: calc(100vh - 75px);
+}
+
+.board-parent {
+  height: 500px;
+}
+
+.box {
+  border-bottom: 5px solid teal;
+  border-right: 5px solid teal;
+  display: flex;
+  min-height: calc(100% / 3);
+  align-items: center;
+  justify-content: center;
+}
+
+.box:nth-child(3n) {
+  border-right: 0;
+}
+
+.box:nth-last-child(-1n + 3) {
+  border-bottom: 0;
 }

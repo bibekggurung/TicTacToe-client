@@ -39,23 +39,21 @@
       <button class="btn btn-primary">Submit</button>
     </form>
       <h1>TicTacToe</h1>
-      <table>
-        <tr>
-          <td>A</td>
-          <td>B</td>
-          <td>C</td>
-        </tr>
-        <tr>
-          <td>D</td>
-          <td>E</td>
-          <td>F</td>
-        </tr>
-        <tr>
-          <td>G</td>
-          <td>H</td>
-          <td>I</td>
-        </tr>
-      </table>
+      <section class="container-fluid board-parent">
+        <div class="row h-100 board">
+          <div class="col-4 box"></div>
+          <div class="col-4 box"></div>
+          <div class="col-4 box"></div>
+          <div class="col-4 box"></div>
+          <div class="col-4 box"></div>
+          <div class="col-4 box"></div>
+          <div class="col-4 box"></div>
+          <div class="col-4 box"></div>
+          <div class="col-4 box"></div>
+        </div>
+        <form id="new-game"><button class="btn btn-primary">New Game</button>
+        </form>
+      </section>
     <h2>Leaving the game?</h2>
     <form id="sign-out">
       <button class="btn btn-danger">Sign Out</button>
