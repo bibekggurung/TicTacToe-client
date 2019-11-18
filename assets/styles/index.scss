@@ -1,1 +1,41 @@
 @import '~bootstrap/scss/bootstrap';
+$black: #000;
+
+.border {
+  border: 3px solid $black;
+  margin: 20px;
+  padding: 20px;
+}
+
+.success {
+  background-color: green;
+  color: white;
+  font-size: 2em;
+}
+
+.failure {
+  background-color: red;
+  color: white;
+  font-size: 2em;
+}
+
+.after-auth {
+  display: none;
+}
+
+h1 {
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  color: #008080;
+}
+
+td {
+  width: 150px;
+  height: 150px;
+  text-align: center;
+  border: solid;
+}
+
+table {
+  margin: 5px auto;
+}
