@@ -33,10 +33,17 @@ body {
   min-height: 100vh;
 }
 
+body {
+  display: grid;
+  min-height: 100vh;
+}
+
 .board {
   margin: 0px auto;
   max-height: calc(100vh - 75px);
   max-width: calc(100vh - 75px);
+  // background-image: url(https://images.unsplash.com/photo-1556079337-a837a2d11f04?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80);
+  // background-size: cover;
 }
 
 .board-parent {
@@ -44,12 +51,16 @@ body {
 }
 
 .box {
-  border-bottom: 5px solid teal;
-  border-right: 5px solid teal;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
   display: flex;
   min-height: calc(100% / 3);
   align-items: center;
   justify-content: center;
+  background-color: white;
+  color: red;
+  text-shadow: 2px 2px rgba(0, 0, 0, .25);
+  font-size: 12vh;
 }
 
 .box:nth-child(3n) {
