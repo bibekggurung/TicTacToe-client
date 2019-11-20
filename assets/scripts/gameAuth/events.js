@@ -5,17 +5,17 @@ const store = require('../store')
 const api = require('./api')
 const ui = require('./ui')
 
-store.turn = 0
-
-let turn = 0
 const player1 = 'X'
 const player2 = 'O'
 let currentPlayer = player1
 
+const board = ['', '', '', '', '', '', '', '', '']
+
 // const onNewGame = (event) => {
 //   event.preventDefault()
-//   turn = 0
-//   currentPlayer = player1
+//   $('.board').show()
+//   $('.box').html('')
+//   let turn = 0
 //   api.create()
 //     .then(ui.onCreateSuccess)
 //     .catch(ui.onCreateFailure)
@@ -28,8 +28,17 @@ let currentPlayer = player1
 //     .then(ui.onIndexSuccess)
 //     .catch(ui.onIndexFailure)
 // }
-
-const board = ['', '', '', '', '', '', '', '', '']
+//
+// const onShow = (event) => {
+//   event.preventDefault()
+//
+//   const form = event.target
+//   const formData = getFormFields(form)
+//
+//   api.show(formData)
+//     .then(ui.onShowSuccess)
+//     .catch(ui.onShowFailure)
+// }
 
 const winConditions = board => {
   let gameWinner = ''
@@ -53,8 +62,8 @@ const winConditions = board => {
     (board[2] === 'O' && board[5] === 'O' && board[8] === 'O') ||
     (board[0] === 'O' && board[4] === 'O' && board[8] === 'O') ||
     (board[2] === 'O' && board[4] === 'O' && board[6] === 'O')) {
-    console.log(`Player O has won!`, 'Game winner is:', gameWinner)
     gameWinner = player2
+    console.log(`Player O has won!`, 'Game winner is:', gameWinner)
     store.over = true
     return true
   } else {
@@ -85,27 +94,25 @@ const onBoxClick = (event) => {
 //     console.log('Game over')
 // }
 
+// const gameData = {
+//   game: {
+//     cell: {
+//       index: 0,
+//       value: currentPlayer
+//     },
+//     over: false
+//   }
+// }
+
 const addHandlers = event => {
   $('.box').on('click', onBoxClick)
   // $('.box').on('click', onGameOver)
   // $('#new-game').on('submit', onNewGame)
 }
 
-// ('#message').html('Tie')
-// store.over = true
-
-// const gameOver = () => {
-//   if (winConditions() !== true) {
-//     return false
-//   } else {
-//     return true
-//   }
-// }
-
 module.exports = {
-  addHandlers
+  addHandlers,
   // onNewGame,
   // onIndex,
-  // onShow,
-  // onPlay
+  // onShow
 }
