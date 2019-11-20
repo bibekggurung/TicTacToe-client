@@ -111,7 +111,7 @@ const addHandlers = event => {
 }
 
 module.exports = {
-  addHandlers,
+  addHandlers
   // onNewGame,
   // onIndex,
   // onShow

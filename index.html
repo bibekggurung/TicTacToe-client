@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>Tic Tac Toe</title>
+  <title>Def not local host</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Do not add `link` tags-->
@@ -14,7 +14,7 @@
 </head>
 
 <body>
-  <h1>TicTacToe</h1>
+  <h1>Let's Play</h1>
   <div id="message"></div>
   <section class="before-auth">
     <h2>New Player? Sign up</h2>
@@ -31,6 +31,20 @@
       <button class="btn btn-primary">Submit</button>
     </form>
   </section>
+  <section class="after-auth container-fluid board-parent">
+    <h1>Noughts and Crosses anyone?</h1>
+    <div class="row h-100 board">
+      <div class="col-4 box" id='0'></div>
+      <div class="col-4 box" id='1'></div>
+      <div class="col-4 box" id='2'></div>
+      <div class="col-4 box" id='3'></div>
+      <div class="col-4 box" id='4'></div>
+      <div class="col-4 box" id='5'></div>
+      <div class="col-4 box" id='6'></div>
+      <div class="col-4 box" id='7'></div>
+      <div class="col-4 box" id='8'></div>
+    </div>
+  </section>
   <section class="after-auth">
     <h2>Change Password</h2>
     <form id="change-password">
@@ -38,20 +52,6 @@
       <input type="type" name="passwords[new]" placeholder="New password">
       <button class="btn btn-primary">Submit</button>
     </form>
-    <h1>TicTacToe</h1>
-    <section class="after-auth container-fluid board-parent">
-      <div class="row h-100 board">
-        <div class="col-4 box" id='0'></div>
-        <div class="col-4 box" id='1'></div>
-        <div class="col-4 box" id='2'></div>
-        <div class="col-4 box" id='3'></div>
-        <div class="col-4 box" id='4'></div>
-        <div class="col-4 box" id='5'></div>
-        <div class="col-4 box" id='6'></div>
-        <div class="col-4 box" id='7'></div>
-        <div class="col-4 box" id='8'></div>
-      </div>
-    </section>
       <form id="new-game"><button class="btn btn-primary">New Game</button>
       </form>
     <h2>Leaving the game?</h2>

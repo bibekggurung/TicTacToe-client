@@ -1,7 +1,6 @@
 'use strict'
-
-const config = require('../config')
-const store = require('../store')
+// const config = require('../config')
+// const store = require('../store')
 
 // const newGame = () => {
 //   return $.ajax({
@@ -48,10 +47,9 @@ const store = require('../store')
 //   })
 // }
 
-
-module.exports = {
-  // newGame,
-  // updateGame,
-  // getGames,
-  // show
-}
+// module.exports = {
+//   // newGame,
+//   // updateGame,
+//   // getGames,
+//   // show
+// }
