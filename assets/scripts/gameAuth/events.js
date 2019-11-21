@@ -11,15 +11,15 @@ let currentPlayer = player1
 
 const board = ['', '', '', '', '', '', '', '', '']
 
-// const onNewGame = (event) => {
-//   event.preventDefault()
-//   $('.board').show()
-//   $('.box').html('')
-//   let turn = 0
-//   api.create()
-//     .then(ui.onCreateSuccess)
-//     .catch(ui.onCreateFailure)
-// }
+const onNewGame = (event) => {
+  event.preventDefault()
+  // $('.board').show()
+  $('.box').html('')
+  // let turn = 0
+  // api.create()
+  //   .then(ui.onCreateSuccess)
+  //   .catch(ui.onCreateFailure)
+}
 
 // const onIndex = (event) => {
 //   event.preventDefault()
@@ -51,7 +51,7 @@ const winConditions = board => {
     (board[0] === 'X' && board[4] === 'X' && board[8] === 'X') ||
     (board[2] === 'X' && board[4] === 'X' && board[6] === 'X')) {
     gameWinner = player1
-    console.log('Player X has won!', 'Game winner is:', gameWinner)
+    $('#message').text('Player X wins!')
     store.over = true
     return true
   } else if ((board[0] === 'O' && board[1] === 'O' && board[2] === 'O') ||
@@ -63,11 +63,12 @@ const winConditions = board => {
     (board[0] === 'O' && board[4] === 'O' && board[8] === 'O') ||
     (board[2] === 'O' && board[4] === 'O' && board[6] === 'O')) {
     gameWinner = player2
-    console.log(`Player O has won!`, 'Game winner is:', gameWinner)
+    $('#message').text('Player O wins!')
     store.over = true
     return true
-  } else {
-    console.log('Tie!')
+  } else if (!board.includes('')) {
+  // if ((board[0] === 'X' || board[0] === 'O' && board[1] === 'X' || board[1] === 'O' && board[2] === 'X' || 'O') ||
+    $('#message').text('Tie!')
     store.over = false
     return false
   }
@@ -107,7 +108,7 @@ const onBoxClick = (event) => {
 const addHandlers = event => {
   $('.box').on('click', onBoxClick)
   // $('.box').on('click', onGameOver)
-  // $('#new-game').on('submit', onNewGame)
+  $('#new-game').on('submit', onNewGame)
 }
 
 module.exports = {
