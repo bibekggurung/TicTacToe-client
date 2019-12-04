@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>Def not local host</title>
+  <title>TicTacToe</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Do not add `link` tags-->
@@ -32,6 +32,8 @@
     </form>
   </section>
   <section class="after-auth container-fluid board-parent">
+    <form id="new-game"><button type="submit" class="btn btn-primary">New Game</button>
+    </form>
     <h1>Noughts and Crosses anyone?</h1>
     <div class="row h-100 board">
       <div class="col-4 box" id='0'></div>
@@ -44,6 +46,8 @@
       <div class="col-4 box" id='7'></div>
       <div class="col-4 box" id='8'></div>
     </div>
+    <form id="get-games"><button type="submit" class="btn btn-primary">Get Games</button>
+    </form>
   </section>
   <section class="after-auth">
     <h2>Change Password</h2>
@@ -52,8 +56,6 @@
       <input type="type" name="passwords[new]" placeholder="New password">
       <button class="btn btn-primary">Submit</button>
     </form>
-      <form id="new-game"><button class="btn btn-primary">New Game</button>
-      </form>
     <h2>Leaving the game?</h2>
     <form id="sign-out">
       <button class="btn btn-danger">Sign Out</button>

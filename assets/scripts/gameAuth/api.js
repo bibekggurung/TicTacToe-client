@@ -1,40 +1,51 @@
 'use strict'
-// const config = require('../config')
-// const store = require('../store')
+const config = require('../config')
+const store = require('../store')
 
-// const newGame = () => {
-//   return $.ajax({
-//     url: config.apiUrl + '/games',
-//     method: 'POST',
-//     contentType: 'application/json',
-//     headers: {
-//       Authorization: 'Token token=' + store.user.token
-//     },
-//     data: '{}'
-//   })
-// }
+const create = () => {
+  return $.ajax({
+    url: config.apiUrl + '/games',
+    method: 'POST',
+    contentType: 'application/json',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    data: '{}'
+  })
+}
+
+// token is x or o
+// cell is 1-8
+// over is true or false
+const updateGame = (token, cell, over) => {
+  return $.ajax({
+    url: config.apiUrl + '/games/' + store.game.id,
+    method: 'PATCH',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    data: {
+      game: {
+        cell: {
+          index: cell,
+          value: token
+        },
+        over: over
+      }
+    }
+  })
+}
 //
-// const update = (gameData) => {
-//   return $.ajax({
-//     url: config.apiUrl + '/games/' + store.game.id,
-//     method: 'PATCH',
-//     data: gameData,
-//     headers: {
-//       Authorization: 'Token token=' + store.user.token
-//     }
-//   })
-// }
-//
-// const getGames = () => {
-//   return $.ajax({
-//     url: config.apiUrl + '/games',
-//     method: 'GET',
-//     contentType: 'application/json',
-//     headers: {
-//       Authorization: 'Token token=' + store.user.token
-//     }
-//   })
-// }
+const getGames = () => {
+  return $.ajax({
+    url: config.apiUrl + '/games',
+    method: 'GET',
+    contentType: 'application/json',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
 //
 // const show = (formData) => {
 //   return $.ajax({
@@ -47,9 +58,9 @@
 //   })
 // }
 
-// module.exports = {
-//   // newGame,
-//   // updateGame,
-//   // getGames,
-//   // show
-// }
+module.exports = {
+  create,
+  updateGame,
+  getGames
+  // show
+}

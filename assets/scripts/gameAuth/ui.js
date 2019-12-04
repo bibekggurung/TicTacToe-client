@@ -1,18 +1,30 @@
 'use strict'
 
 const store = require('../store')
-// const onGameCreateFailure = () => {
-//   $('#message').html('Whoops! Refresh the page.')
-// }
-//
-// const onGamecreateSuccess = (responseData) => {
-//   store.game = responseData.game
-//   $('form').trigger('reset')
-//   $('#gameID').text(`Game ID: ${store.game.id}`)
-//   // $('.smallgameboard').html('')
-// }
-//
-// module.exports = {
-//   onGameCreateFailure,
-//   onGamecreateSuccess
-// }
+const onCreateFailure = () => {
+  $('#message').html('Whoops! Could not create game.')
+}
+
+const onCreateSuccess = (responseData) => {
+  store.game = responseData.game
+  $('form').trigger('reset')
+  $('#gameID').text(`Game ID: ${store.game.id}`)
+  $('.box').html('')
+  $('#message').text('New game started')
+}
+
+const onGetGamesSuccess = (responseData) => {
+  $('#message').text('You played ' + responseData.games.length + ' games.')
+  console.log('You got them games', responseData.games.length)
+}
+
+const onGetGamesFailure = () => {
+  $('#message').html('Whoops! Could not get games.')
+}
+
+module.exports = {
+  onCreateSuccess,
+  onCreateFailure,
+  onGetGamesSuccess,
+  onGetGamesFailure
+}

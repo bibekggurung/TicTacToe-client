@@ -14,14 +14,14 @@ const onFailure = message => {
 }
 
 const onSignUpSuccess = () => {
-  onSuccess('New account created')
+  onSuccess('New account created! Now sign in below.')
 }
 
 const onSignUpFailure = () => {
   onFailure('Not created')
 }
 
-const onSignInSuccess = responseData => {
+const onSignInSuccess = (responseData) => {
   store.user = responseData.user
   console.log(store)
   onSuccess('Welcome back!')

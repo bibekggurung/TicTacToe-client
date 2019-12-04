@@ -9,8 +9,8 @@ const onSignup = event => {
   const form = event.target
   const formData = getFormFields(form)
   api.signUp(formData)
-    .then(ui.onSignupSuccess)
-    .catch(ui.onSignupFailure)
+    .then(ui.onSignUpSuccess)
+    .catch(ui.onSignUpFailure)
 }
 
 const onSignIn = event => {
@@ -33,6 +33,7 @@ const onChangePassword = event => {
 
 const onSignOut = (event) => {
   event.preventDefault()
+  $('.box').text('')
   api.signOut()
     .then(ui.onSignOutSuccess)
     .catch(ui.onSignOutFailure)
