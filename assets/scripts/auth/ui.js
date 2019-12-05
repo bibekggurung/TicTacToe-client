@@ -1,8 +1,6 @@
 'use strict'
 const store = require('../store')
 
-// const onGetGamesSuccess = (gameData)
-
 const onSuccess = message => {
   $('#message').text(message).addClass('success').removeClass('failure')
   $('form').trigger('reset')
@@ -23,7 +21,6 @@ const onSignUpFailure = () => {
 
 const onSignInSuccess = (responseData) => {
   store.user = responseData.user
-  console.log(store)
   onSuccess('Welcome back!')
   $('.after-auth').show()
   $('.before-auth').hide()
@@ -44,9 +41,8 @@ const onChangePasswordFailure = () => {
 const onSignOutSuccess = () => {
   store.user = store
   onSuccess('See ya!')
-  // return to before auth
-  // delete token
-  store.user = {} //  store no longer knows who I am
+
+  store.user = {}
   $('.after-auth').hide()
   $('.before-auth').show()
 }

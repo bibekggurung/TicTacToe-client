@@ -14,9 +14,6 @@ const create = () => {
   })
 }
 
-// token is x or o
-// cell is 1-8
-// over is true or false
 const updateGame = (token, cell, over) => {
   return $.ajax({
     url: config.apiUrl + '/games/' + store.game.id,

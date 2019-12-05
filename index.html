@@ -5,10 +5,8 @@
   <title>TicTacToe</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Do not add `link` tags-->
   <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 
-  <!-- Do not add `script` tags-->
   <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
   <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
 </head>
@@ -32,9 +30,7 @@
     </form>
   </section>
   <section class="after-auth container-fluid board-parent">
-    <form id="new-game"><button type="submit" class="btn btn-primary">New Game</button>
-    </form>
-    <h1>Noughts and Crosses anyone?</h1>
+    <h3>Noughts and Crosses anyone?</h3>
     <div class="row h-100 board">
       <div class="col-4 box" id='0'></div>
       <div class="col-4 box" id='1'></div>
@@ -46,21 +42,19 @@
       <div class="col-4 box" id='7'></div>
       <div class="col-4 box" id='8'></div>
     </div>
-    <form id="get-games"><button type="submit" class="btn btn-primary">Get Games</button>
+    <form id="new-game"><button type="submit" class="btn btn-primary">New Game</button>
     </form>
-  </section>
-  <section class="after-auth">
-    <h2>Change Password</h2>
+    <h5>Change Password</h5>
     <form id="change-password">
       <input type="text" name="passwords[old]" placeholder="Old password">
-      <input type="type" name="passwords[new]" placeholder="New password">
+      <input type="password" name="passwords[new]" placeholder="New password">
       <button class="btn btn-primary">Submit</button>
     </form>
-    <h2>Leaving the game?</h2>
+    <form id="get-games"><button type="submit" class="btn btn-primary">Get Games</button>
+    </form>
     <form id="sign-out">
       <button class="btn btn-danger">Sign Out</button>
     </form>
   </section>
 </body>
-
 </html>

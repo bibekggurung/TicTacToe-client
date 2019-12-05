@@ -15,7 +15,6 @@ const onCreateSuccess = (responseData) => {
 
 const onGetGamesSuccess = (responseData) => {
   $('#message').text('You played ' + responseData.games.length + ' games.')
-  console.log('You got them games', responseData.games.length)
 }
 
 const onGetGamesFailure = () => {
