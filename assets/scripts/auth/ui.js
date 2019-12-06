@@ -21,7 +21,7 @@ const onSignUpFailure = () => {
 
 const onSignInSuccess = (responseData) => {
   store.user = responseData.user
-  onSuccess('Welcome back!')
+  onSuccess('Welcome! Click new game!')
   $('.after-auth').show()
   $('.before-auth').hide()
 }

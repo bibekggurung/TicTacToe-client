@@ -1,4 +1,5 @@
 'use strict'
+const store = require('../store')
 
 const api = require('./api')
 const getFormFields = require('../../../lib/get-form-fields')
@@ -33,6 +34,7 @@ const onChangePassword = event => {
 
 const onSignOut = (event) => {
   event.preventDefault()
+  store.over = true
   $('.box').text('')
   api.signOut()
     .then(ui.onSignOutSuccess)

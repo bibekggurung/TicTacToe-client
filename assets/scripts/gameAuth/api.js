@@ -43,17 +43,6 @@ const getGames = () => {
     }
   })
 }
-//
-// const show = (formData) => {
-//   return $.ajax({
-//     url: config.apiUrl + '/games/' + formData.game.id,
-//     method: 'GET',
-//     data: formData,
-//     headers: {
-//       Authorization: 'Token token=' + store.user.token
-//     }
-//   })
-// }
 
 module.exports = {
   create,
