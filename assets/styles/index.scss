@@ -1,5 +1,4 @@
 @import '~bootstrap/scss/bootstrap';
-$black: #000;
 
 .border {
   border: 3px solid $black;
@@ -7,16 +6,28 @@ $black: #000;
   padding: 20px;
 }
 
+.message{
+  align-content: center;
+align-items: center;
+text-align: center;
+  z-index: 2;
+}
 .success {
-  background-color: green;
   color: white;
   font-size: 2em;
+  position: absolute;
+  align-content: center;
+  text-align: center;
+  z-index: 2;
 }
 
 .failure {
-  background-color: red;
-  color: white;
+  color: red;
   font-size: 2em;
+  position: absolute;
+  align-content: center;
+  text-align: center;
+  z-index: 2;
 }
 
 .after-auth {
@@ -26,16 +37,10 @@ $black: #000;
 body {
   display: grid;
   min-height: 100vh;
-}
-
-body {
-  display: grid;
-  min-height: 100vh;
-}
-
-body {
-  display: grid;
-  min-height: 100vh;
+  background: rgb(238,174,202);
+  background: linear-gradient(90deg, rgba(238,174,202,1) 0%, rgba(94,170,198,1) 100%);
+  align-content: center;
+  text-align: center;
 }
 
 .board {
@@ -69,4 +74,12 @@ body {
 
 .box:nth-last-child(-1n + 3) {
   border-bottom: 0;
+}
+
+.message-container {
+  bottom: 1rem;
+  left: 1rem;
+  margin: auto;
+  max-width: 500px;
+  position: fixed;
 }
